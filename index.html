@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Instagram - IKN</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Custom font similar to Instagram's logo font */
+        @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+        .font-instagram {
+            font-family: 'Grand Hotel', cursive;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 244px; /* Fixed width for sidebar */
+            height: 100vh;
+        }
+        
+        /* Main content margin for desktop */
+        @media (min-width: 992px) {
+            .main-content {
+                margin-left: 244px;
+            }
+        }
+        
+        /* Custom styling for profile elements */
+        .profile-pic-lg { width: 150px; height: 150px; }
+        .profile-pic-sm { width: 77px; height: 77px; }
+        .highlight-pic { width: 66px; height: 66px; }
+
+        /* Feed image styling */
+        .feed-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Content tabs styling */
+        .content-tabs a {
+            border-top: 1px solid transparent;
+            color: #6c757d;
+            text-decoration: none;
+        }
+        .content-tabs a.active {
+            border-top: 1px solid #212529;
+            color: #212529;
+        }
+    </style>
+</head>
+<body class="text-dark">
+
+    <div class="d-flex">
+        <!-- A. SIDEBAR NAV: Hidden on mobile, visible from 'lg' breakpoint -->
+        <nav class="d-none d-lg-flex flex-column vh-100 position-fixed top-0 left-0 border-end bg-white p-4 sidebar">
+            <h1 class="font-instagram fs-2 mb-4">Instagram</h1>
+            
+            <ul class="nav flex-column gap-2 flex-grow-1">
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-house-door fs-4"></i> Beranda</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-search fs-4"></i> Cari</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-compass fs-4"></i> Jelajahi</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-film fs-4"></i> Reels</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-send fs-4"></i> Pesan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-heart fs-4"></i> Notifikasi</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-plus-square fs-4"></i> Buat</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3 fw-bold"><i class="bi bi-person-circle fs-4"></i> Profil</a></li>
+            </ul>
+
+            <div class="mt-auto">
+                <a href="#" class="nav-link text-dark fs-6 d-flex align-items-center gap-3"><i class="bi bi-list fs-4"></i> Lainnya</a>
+            </div>
+        </nav>
+
+        <!-- B. MAIN CONTENT -->
+        <main class="w-100 main-content">
+            <div class="container-fluid" style="max-width: 975px;">
+                <div class="p-3 p-md-4">
+                    <!-- Mobile Header: Visible on mobile, hidden from 'lg' breakpoint -->
+                    <header class="d-lg-none d-flex justify-content-between align-items-center mb-4">
+                        <i class="bi bi-arrow-left fs-4"></i>
+                        <div class="d-flex align-items-center gap-2">
+                            <h1 class="h6 fw-bold mb-0">ikn_id</h1>
+                            <i class="bi bi-patch-check-fill text-primary"></i>
+                        </div>
+                        <i class="bi bi-three-dots fs-4"></i>
+                    </header>
+
+                    <!-- Profile Header -->
+                    <header class="row align-items-center mb-4">
+                        <!-- Profile Picture -->
+                        <div class="col-sm-4 text-center text-sm-start mb-3 mb-sm-0">
+                            <img class="rounded-circle profile-pic-lg mx-auto" src="asset/img/ikn.png" alt="Foto Profil IKN">
+                        </div>
+
+                        <!-- Profile Info (Desktop Layout) -->
+                        <div class="col-sm-8">
+                            <!-- Top Row: Username & Buttons -->
+                            <div class="d-flex align-items-center mb-3">
+                                <h2 class="fs-4 text-secondary fw-light me-4">ikn_id <i class="bi bi-patch-check-fill text-primary fs-5"></i></h2>
+                                <button class="btn btn-primary btn-sm me-2">Diikuti</button>
+                                <button class="btn btn-light btn-sm border">Kirim pesan</button>
+                            </div>
+
+                            <!-- Stats (Desktop) -->
+                            <ul class="list-inline d-none d-sm-flex gap-4 mb-3">
+                                <li class="list-inline-item"><strong>1.278</strong> kiriman</li>
+                                <li class="list-inline-item"><strong>469 rb</strong> pengikut</li>
+                                <li class="list-inline-item"><strong>251</strong> diikuti</li>
+                            </ul>
+                            
+                            <!-- Bio (Desktop) -->
+                            <div class="d-none d-sm-block">
+                                <p class="fw-bold mb-0">Ibu Kota Nusantara</p>
+                                <p class="text-muted">Pejabat Pemerintah</p>
+                                <p>Kota Dunia Untuk Semua<br>#MenujuIbuKotaNegara</p>
+                                <a href="#" class="text-decoration-none fw-semibold">ikn.go.id</a>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <!-- Bio (Mobile Layout) -->
+                    <div class="d-sm-none mb-3">
+                        <p class="fw-bold mb-0">Ibu Kota Nusantara</p>
+                        <p class="text-muted">Pejabat Pemerintah</p>
+                        <p>Kota Dunia Untuk Semua<br>#MenujuIbuKotaNegara</p>
+                        <a href="#" class="text-decoration-none fw-semibold">ikn.go.id</a>
+                    </div>
+                    
+                    <!-- Highlights -->
+                    <section class="d-flex gap-4 mb-4">
+                        <div class="text-center">
+                            <img src="asset/img/visit.png" alt="Visit Highlight" class="rounded-circle highlight-pic mb-1">
+                            <span class="small d-block">Visit</span>
+                        </div>
+                        <div class="text-center">
+                            <img src="asset/img/SP.png" alt="Siaran Pers Highlight" class="rounded-circle highlight-pic mb-1">
+                            <span class="small d-block">Siaran Pers</span>
+                        </div>
+                    </section>
+                    
+                    <!-- Stats (Mobile Layout) -->
+                    <section class="d-sm-none d-flex justify-content-around text-center p-2 border-top border-bottom mb-2">
+                        <div>
+                            <p class="fw-semibold mb-0">1.278</p>
+                            <p class="small text-muted mb-0">kiriman</p>
+                        </div>
+                        <div>
+                            <p class="fw-semibold mb-0">469 rb</p>
+                            <p class="small text-muted mb-0">pengikut</p>
+                        </div>
+                        <div>
+                            <p class="fw-semibold mb-0">251</p>
+                            <p class="small text-muted mb-0">diikuti</p>
+                        </div>
+                    </section>
+
+                    <!-- Content Tabs -->
+                    <section class="border-top border-secondary-subtle">
+                        <div class="d-flex justify-content-center gap-5 content-tabs">
+                            <a href="#" class="d-flex align-items-center gap-2 py-3 small fw-semibold text-uppercase active">
+                                <i class="bi bi-grid-3x3"></i> <span class="d-none d-sm-inline">Postingan</span>
+                            </a>
+                            <a href="#" class="d-flex align-items-center gap-2 py-3 small fw-semibold text-uppercase">
+                                <i class="bi bi-film"></i> <span class="d-none d-sm-inline">Reels</span>
+                            </a>
+                            <a href="#" class="d-flex align-items-center gap-2 py-3 small fw-semibold text-uppercase">
+                                <i class="bi bi-person-badge"></i> <span class="d-none d-sm-inline">Dengan Tag</span>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Photo Grid Content -->
+                    <section class="row g-1 g-md-3">
+                        <div class="col-4"><img src="asset/img/1.png" alt="Foto feed 1" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/2.png" alt="Foto feed 2" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/3.png" alt="Foto feed 3" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/4.png" alt="Foto feed 4" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/5.png" alt="Foto feed 5" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/6.png" alt="Foto feed 6" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/7.png" alt="Foto feed 7" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/8.png" alt="Foto feed 8" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/9.png" alt="Foto feed 9" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/10.png" alt="Foto feed 10" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/11.png" alt="Foto feed 11" class="feed-img"></div>
+                        <div class="col-4"><img src="asset/img/12.png" alt="Foto feed 12" class="feed-img"></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
